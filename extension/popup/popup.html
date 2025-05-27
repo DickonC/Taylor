@@ -1,13 +1,60 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="popup.css">
+  <title>T-Shirt Measurements Extension</title>
+  <link rel="stylesheet" href="popup.css">
 </head>
 <body>
-    <div id="app">
-        <!-- Popup content will go here -->
+  <div id="app">
+    <!-- Login Section -->
+    <div id="login-section" style="display: none;">
+      <h2>Please Login</h2>
+      <button id="login-btn">Login to Website</button>
     </div>
-    <script src="popup.js"></script>
+
+    <!-- Size Recommendation Section -->
+    <div id="recommendation-section" style="display: none;">
+      <div class="recommendation-header">
+        <h2>Size Recommendation</h2>
+      </div>
+      
+      <div class="recommendation-content">
+        <div class="recommended-size">
+          <span class="size-label">Recommended Size:</span>
+          <span id="recommended-size" class="size-value">XS</span>
+        </div>
+        
+        <div class="recommendation-details">
+          <span id="recommendation-confidence">Based on 2 measurements</span>
+          <span id="recommendation-accuracy">Perfect fit (0.0cm avg difference)</span>
+        </div>
+      </div>
+
+      <div class="recommendation-buttons">
+        <button id="adjust-measurements-btn" class="adjust-btn">
+          Adjust Measurements
+        </button>
+        <button id="view-details-btn" class="details-btn">View Details</button>
+      </div>
+    </div>
+
+    <!-- Measurements Section -->
+    <div id="measurements-section" style="display: none;">
+      <div class="measurements-header">
+        <button id="back-btn" class="back-btn"> Back</button>
+        <h2>Detailed Measurements</h2>
+      </div>
+
+      <div class="measurements-content">
+        <div id="measurements-list" class="measurements-table"></div>
+      </div>
+
+      <div class="measurements-buttons">
+        <button id="adjust-btn" class="adjust-btn">Adjust Measurements</button>
+        <button id="logout-btn" class="logout-btn">Logout</button>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
 </body>
-</html> 
+</html>

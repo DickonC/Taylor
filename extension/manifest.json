@@ -1,14 +1,42 @@
 {
-  "manifest_version": 3,
-  "name": "Taylor",
-  "version": "0.1",
-  "description": "A Clothing Recommendation Extension",
-  "permissions": [],
-  "action": {
-    "default_popup": "popup/popup.html"
-  },
-  "options_page": "options/options.html",
-  "background": {
-    "service_worker": "background/background.js"
+    "manifest_version": 3,
+    "name": "T-Shirt Measurements Extension",
+    "version": "1.0",
+    "description": "Access your T-shirt measurements from the browser",
+    "permissions": [
+      "storage",
+      "identity",
+      "tabs",
+      "activeTab"
+    ],
+    "host_permissions": [
+      "http://localhost:3001/*",
+      "http://localhost:3000/*"
+    ],
+    "externally_connectable": {
+      "matches": ["http://localhost:3000/*"]
+    },
+    "action": {
+      "default_popup": "popup/popup.html",
+      "default_icon": {
+        "16": "assets/icon.png",
+        "48": "assets/icon.png",
+        "128": "assets/icon.png"
+      }
+    },
+    "background": {
+      "service_worker": "background/background.js"
+    },
+    "content_scripts": [{
+      "matches": ["<all_urls>"],
+      "js": [
+        "content/unitConverter.js",
+        "content/productPageDetector.js",
+        "content/sizeGuideExtractor.js",
+        "content/sizeChartProcessor.js",
+        "content/measurementMatcher.js",
+        "content/sizeRecommendation.js",
+        "content/notification.js"
+      ]
+    }]
   }
-} 

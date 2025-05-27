@@ -1,4 +1,209 @@
 body {
-    width: 300px;
-    padding: 10px;
-} 
+  width: 320px;
+  padding: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  margin: 0;
+}
+
+h2 {
+  color: #333;
+  margin: 0;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* Common styles */
+.recommendation-header,
+.measurements-header {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recommendation-header h2,
+.measurements-header h2 {
+  color: #2d5a27;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.back-btn {
+  position: absolute;
+  left: 0;
+  background: none;
+  border: none;
+  color: #2d5a27;
+  font-size: 10px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.back-btn:hover {
+  background: #f0f9f0;
+}
+
+/* Recommendation Section */
+.recommendation-content {
+  background: linear-gradient(135deg, #f8fffe 0%, #f0f9f0 100%);
+  border: 2px solid #4CAF50;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.recommended-size {
+  margin-bottom: 12px;
+}
+
+.size-label {
+  display: block;
+  color: #666;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.size-value {
+  display: inline-block;
+  font-size: 32px;
+  font-weight: 700;
+  color: #2d5a27;
+  background: #fff;
+  border: 2px solid #4CAF50;
+  border-radius: 8px;
+  padding: 8px 16px;
+  min-width: 60px;
+}
+
+.recommendation-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: #666;
+}
+
+.recommendation-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* Measurements Section */
+.measurements-content {
+  background: linear-gradient(135deg, #f8fffe 0%, #f0f9f0 100%);
+  border: 2px solid #4CAF50;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.measurements-table {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.measurement-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.measurement-item:last-child {
+  border-bottom: none;
+}
+
+.measurement-label {
+  color: #666;
+  font-weight: 500;
+}
+
+.measurement-value {
+  color: #333;
+  font-weight: 600;
+}
+
+/* Buttons */
+.adjust-btn {
+  flex: 1;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.adjust-btn:hover {
+  background: #45a049;
+}
+
+.details-btn {
+  flex: 1;
+  background: #f5f5f5;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.details-btn:hover {
+  background: #e8e8e8;
+}
+
+.logout-btn {
+  flex: 1;
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.logout-btn:hover {
+  background: #da190b;
+}
+
+.measurements-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+/* Login Section */
+#login-btn {
+  width: 100%;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+#login-btn:hover {
+  background: #45a049;
+}
+
+.no-measurements {
+  text-align: center;
+  color: #666;
+  padding: 16px;
+  font-style: italic;
+}
